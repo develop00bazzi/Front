@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title>폼(양식)태그 연습2</title>
+</head>
+<body>
+  <h2>Form태그 = 양식태그</h2>
+  <form name="myfrom" method="post" action="#" >
+    <table border cellpadding="10px" cellspacing="0px">
+      <tr>
+        <td>
+          <label for="name">이름</label>
+        </td>
+        <td>
+          <input type="text" name="name" id="name" >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="age">나이</label>
+        </td>
+        <td>
+          <input type="number" name="age" id="age" size="3" min="10" max="99"> 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="mail">메일주소</label>
+        </td>
+        <td>
+          <input type="mail" name="mail" id="mail"value="dragon0hun@naver.com"/>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">좋아하는 산</td>
+        <td>
+          <select name="mnt" size="5" multiple>
+            <option value="설악산">설악산</option>
+            <option value="백두산">백두산</option>
+            <option value="한라산">한라산</option>
+            <option value="지리산">지리산</option>
+            <option value="소백산">소백산</option>
+            <option value="북한산">북한산</option>
+            <option value="월악산">월악산</option>
+            <option value="부모산">부모산</option>
+            <option value="속리산">속리산</option>
+            <option value="남  산">남  산</option>
+            <option value="태백산">태백산</option>
+          </select> 
+        </td>
+      </tr>
+      <tr>
+        <td>첨부파일</td>
+        <td>
+          <input type="file" name="file">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <!--<input type="submit" value="전송"/>-->
+          <input type="reset" value="다시 입력" />
+          <input type="button" value="회원가입"/>
+        </td>
+      </tr>
+    </table>
+  </form>
+  
+  
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test11.html</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        #title {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+            background-image: url("../../Images/coding.png");
+            text-align: center;
+            font-size: 2em;
+            color: white;
+        }
+        .left {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            left: 460px;
+        }
+        .right {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            right: 460px;
+        }
+        #exam1 {
+            top: 108px;
+            background-color: greenyellow;
+        }
+        #exam2 {
+            top: 408px;
+            background-color: green;
+        }
+        #exam3 {
+            top: 708px;
+            background-color: blue;
+        }
+        #exam4-1,#exam4-2,#exam4-3,#exam4-4 {
+            width: 200px;
+            height: 400px;
+            margin: 20px;
+        }
+        #exam4-1 {
+            background-color: red;
+            position: absolute;
+            top: 120px;
+            left: 700px;
+        }
+        #exam4-2 {
+            background-color: violet;
+            position: absolute;
+            top: 120px;
+            right: 700px;
+        }
+        #exam4-3 {
+            background-color: green;
+            position: absolute;
+            top: 580px;
+            left: 700px;
+        }
+        #exam4-4 {
+            background-color: magenta;
+            position: absolute;
+            top: 580px;
+            right: 700px;
+        }
+        #exam5 {
+            top: 108px;
+            background-color: brown;
+        }
+        #exam6 {
+            top: 408px;
+            background-color: skyblue;
+        }
+        #foot {
+            position: absolute;
+            left: 460px;
+            top: 1028px;
+            width: 1000px;
+            height: 100px;
+            background-color: burlywood;
+        }
+        #exam1:hover,#exam2:hover,#exam3:hover,
+        #exam4-1:hover,#exam4-2:hover,#exam4-3:hover,#exam4-4:hover,
+        #exam5:hover,#exam6:hover,#foot:hover    {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        레이아웃 패치
+    </div>
+    <div id="exam1" class="left">연습 1</div>
+    <div id="exam2" class="left">연습 2</div>
+    <div id="exam3" class="left">연습 3</div>
+    <div id="exam4">
+        <div id="exam4-1" class="exam41">
+            <div>연습 4-1-1</div>
+            <div>연습 4-1-2</div>
+            <div>연습 4-1-3</div>
+            <div>연습 4-1-4</div>
+            <div>연습 4-1-5</div>
+        </div>
+        <div id="exam4-2" class="exam41">
+            <div>연습 4-2-1</div>
+            <div>연습 4-2-2</div>
+            <div>연습 4-2-3</div>
+            <div>연습 4-2-4</div>
+            <div>연습 4-2-5</div>
+        </div>
+        <div id="exam4-3" class="exam42">
+            <div>연습 4-3-1</div>
+            <div>연습 4-3-2</div>
+            <div>연습 4-3-3</div>
+            <div>연습 4-3-4</div>
+            <div>연습 4-3-5</div>
+        </div>
+        <div id="exam4-4" class="exam42">
+            <div>연습 4-4-1</div>
+            <div>연습 4-4-2</div>
+            <div>연습 4-4-3</div>
+            <div>연습 4-4-4</div>
+            <div>연습 4-4-5</div>
+        </div>
+    </div>
+    <div id="exam5" class="right">연습 5</div>
+    <div id="exam6" class="right">연습 6</div>
+    <div id="foot"> 푸터 (바닥글) </div>
+</body>
+</html>

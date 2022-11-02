@@ -1,0 +1,123 @@
+<html>
+<head>
+  <title> 회원가입 폼 연습 </title>
+</head>
+<body align="center">
+  <h2><b> 'HTML로 회원가입 폼 만들기 연습해보기~'<b></h2>
+  <p align="center">
+    안녕하세요.<br/>
+    회원가입을 하시려면 아래의 내용을 입력 후<br/>
+    회원가입 버튼을 눌러주세요.<br/>
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+    <img src="../../Images/1.png" align="center"></img>
+    
+    <br/>
+    
+    <b>[회원가입을 위한 입력창입니다.]</b>
+    
+    <br/>
+    <br/>
+    <br/>
+    
+    <form name="myform" method="get" action="#">
+    <table border align="center" cellpadding="10px" cellspacing="0px">
+      <tr>
+        <td><b><label for="id">아이디 입력</label></b></td>
+        <td>
+          <input type="text" name="id" id="id" > <input type="button" value="중복 확인"/>
+        </td> 
+      </tr>
+      <tr>
+        <td><b><label for="password">비밀번호</label></b></td>
+        <td>
+        <input type="password" name="pwd" id="pwd" >
+        <br/><font size="2px" color="red"> 비밀번호는 영어 대소문자 및 숫자,<br/> 그리고 특수문자를 하나 포함해야 합니다.</font>
+        </td> 
+      </tr>
+      <tr>
+        <td><b><label for="passwordcheck">비밀번호 확인</label></b></td>
+        <td>
+          <input type="password" name="pwdcheck" id="pwdcheck" > <input type="button" value="일치 확인"/>
+        </td> 
+      </tr>
+      <tr>
+        <td><b><label for="name">이름</label></b></td>
+        <td><input type="text" name="name" id="name" ></td> 
+      </tr>
+      <tr>
+        <td><b><label for="age">나이</label></b></td>
+        <td>
+          <input type="number" name="age" id="age" size="3" min="20" > <input type="button" value="성인 인증"/>
+          <br/><font size="2px"> 20세 이상만 가입이 가능합니다.</font>
+        </td>
+      </tr>
+      <tr>
+        <td><b><label for="address">주소</label></b></td>
+        <td>
+        <input type="text" name="address" id="address" > <input type="button" value="주소 검색"/>
+        </td>
+      </tr>
+      <tr>
+        <td><b><label for="zipcode">우편번호</label></b></td>
+        <td>
+        <input type="text" name="zipcode" id="zipcode" > <input type="button" value="확         인"/>
+        </td>
+      </tr>
+      <tr>
+        <td><b><label for="phonenumber">전화번호</label></b></td>
+        <td>
+        <input type="text" name="phonenumber" id="phonenumber" > <input type="button" value="번호 인증"/>
+        </td>
+      </tr>
+      <tr>
+        <td><b><label for="email">이메일</label></b></td>
+        <td>
+        <input type="@com" name="email" id="email"/>
+        <select name="@com">
+          <option value="직접 입력" selected >직접 입력</option>
+          <option value="@naver.com">@naver.com</option>
+          <option value="@daum.net">@daum.net</option>
+          <option value="@gmail.com">@gmail.com</option>
+          <option value="@kakao.com">@kakao.com</option>
+        </select>
+        <input type="button" value="메일 인증"/>
+        </td>
+      </tr>
+      <tr>
+        <td><b>성별</b></td>
+        <td>
+          <input type="radio" name="gender" id="gender1" value="male" checked />남자
+          <input type="radio" name="gender" id="gender2" value="female"/>여자
+        </td>
+      </tr>
+      <tr>
+        <td><b><label for="job">직업 선택</label></b></td>
+        <td>
+          <input type="checkbox" name="job" id="job" value="무직" /> 무직
+          <input type="checkbox" name="job" id="job" value="학생" /> 학생
+          <input type="checkbox" name="job" id="job" value="회사원" /> 회사원 <br/>
+          <input type="checkbox" name="job" id="job" value="주부" /> 주부
+          <input type="checkbox" name="job" id="job" value="군인" /> 군인
+          <input type="checkbox" name="job" id="job" value="직장인" /> 직장인 <br/>
+          <input type="checkbox" name="job" id="job" value="경찰" /> 경찰
+          <input type="checkbox" name="job" id="job" value="검사" /> 검사
+          <input type="checkbox" name="job" id="job" value="취준생" /> 취준생
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="button" value="회원 가입"/>
+          <input type="button" value="가입 취소"/>
+        </td>
+      </tr>
+    </table>
+  </form>
+  </p>
+</body>
+</html>

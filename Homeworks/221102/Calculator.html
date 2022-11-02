@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 계산기 만들기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 500px;
+            height: 650px;
+            background-color: #ccc;
+            margin: 0 auto;
+        }
+        #display {
+            width: 496px;
+            height: 50px;
+            background-color: #eee;
+            border: 2px solid gray;
+            margin: 15px auto;
+            font-size: 2em;
+            text-align: right;
+        }
+        #buttonBox {
+            width:500px;
+            height:600px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .button {
+            width: 125px;
+            height: 100px;
+            font-size: 3em;
+            font-weight: bolder;
+        }
+    </style>
+    <script>
+        'use strict'
+
+        function btn(Num) {
+            if(display.value.charAt(display.value.length - 1)=="0"&&Num=="0") {
+                display.value;
+            }
+            else {
+                display.value+=Num;
+            }
+        }
+
+        function btnAC() {
+            display.value="";
+        }
+
+        function btnMul() {
+            if(display.value=="") {
+                display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="-") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="+") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="*") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="/") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)==".") {
+            display.value;
+            }
+            else display.value+="*";
+        }
+
+        function btnDiv() {
+            if(display.value=="") {
+                display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="-") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="+") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="*") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="/") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)==".") {
+            display.value;
+            }
+            else display.value+="/";
+        }
+
+        function btnAdd() {
+            if(display.value=="") {
+                display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="-") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="+") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="*") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="/") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)==".") {
+            display.value;
+            }
+            else display.value+="+";
+        }
+
+        function btnSub() {
+            if(display.value=="") {
+                display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="-") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="+") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="*") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="/") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)==".") {
+            display.value;
+            }
+            
+            else display.value+="-";
+        }
+
+        function btnDEL() {
+            if (display.value!=""||display.value.length!=0) {
+                display.value=display.value.substring(0, display.value.length-1);
+            }
+            else display.value;
+        }
+        
+        function btnEqual() {
+            if(display.value=="") {
+                display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="-") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="+") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="*") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="/") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)==".") {
+            display.value;
+            }
+            else {
+                let result=eval(display.value);
+                display.value=result;
+            }
+        }
+
+        function btnPoint() {
+            if(display.value=="") {
+                display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="-") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="+") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="*") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)=="/") {
+            display.value;
+            }
+            else if (display.value.charAt(display.value.length-1)==".") {
+            display.value;
+            }
+            else display.value+=".";
+        }
+
+        function btnPer() {
+            display.value+="(/100)"
+        }
+
+        function btnCE() {
+            if (display.value!=""||display.value.length!=0) {
+                display.value=display.value.substring(0, display.value.length-1);
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h2 style="text-align: center; background-color: #aaa;">계산기</h2>
+        <div id="main">
+            <form name="calcultator">
+                <div>
+                    <input type="text" name="display" id="display" placeholder="0"/> 
+                    <!-- <div id="display"></div> -->
+                </div>
+                <div id="buttonBox">
+                    <div class="buttons"><input type="button" value="%" onclick="btnPer()" class="button" /></div>
+                    <div class="buttons"><input type="button" value="□" onclick="btnN()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="□" onclick="btnN()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="□" onclick="btnN()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="CE" onclick="btnCE()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="AC" onclick="btnAC()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="DEL" onclick="btnDEL()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="/" onclick="btnDiv()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="7" onclick="btn(7)" class="button"/></div>
+                    <div class="buttons"><input type="button" value="8" onclick="btn(8)" class="button"/></div>
+                    <div class="buttons"><input type="button" value="9" onclick="btn(9)" class="button"/></div>
+                    <div class="buttons"><input type="button" value="X" onclick="btnMul()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="4" onclick="btn(4)" class="button"/></div>
+                    <div class="buttons"><input type="button" value="5" onclick="btn(5)"class="button"/></div>
+                    <div class="buttons"><input type="button" value="6" onclick="btn(6)" class="button"/></div>
+                    <div class="buttons"><input type="button" value="-" onclick="btnSub()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="1" onclick="btn(1)" class="button"/></div>
+                    <div class="buttons"><input type="button" value="2" onclick="btn(2)" class="button"/></div>
+                    <div class="buttons"><input type="button" value="3" onclick="btn(3)" class="button"/></div>
+                    <div class="buttons"><input type="button" value="+" onclick="btnAdd()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="□" onclick="btnN()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="0" onclick="btn(0)" class="button"/></div>
+                    <div class="buttons"><input type="button" value="." onclick="btnPoint()" class="button"/></div>
+                    <div class="buttons"><input type="button" value="=" onclick="btnEqual()" class="button"/></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

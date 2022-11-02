@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test15.html</title>
+    <script>
+        'use strict'
+
+        function calculator() {
+            let calc=document.getElementById("calc").value;
+            let res=eval(calc);
+            myform.result.value=res;
+
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" method="get" action="#">
+        <h2>수식 입력 받아 결과 출력하기</h2>
+        <p><label>수식 입력</label> :</p>
+        <p><input type="text" name="calc" id="calc" /></p>
+        <p><input type="button" value="입력한 수식 계산" onclick="calculator()"/></p>
+        <p><input type="text" name="res" id="result" /></p>
+    </form>
+</body>
+</html>

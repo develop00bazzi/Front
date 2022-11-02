@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test14.html</title>
+    <script>
+        'use strict'
+
+        function add() {
+            let su1=document.getElementById("su1").value;
+            let su2=document.getElementById("su2").value;
+            let res=(parseInt(su1))+(parseInt(su2));
+            alert("덧셈 결과:"+res);
+        }
+
+        function mul() {
+            let su1=document.getElementById("su1").value;
+            let su2=document.getElementById("su2").value;
+            let res=(parseInt(su1))-(parseInt(su2));
+            alert("뺄셈 결과:"+res);
+        }
+
+        function sub() {
+            let su1=document.getElementById("su1").value;
+            let su2=document.getElementById("su2").value;
+            let res=(parseInt(su1))*(parseInt(su2));
+            alert("곱셈 결과:"+res);
+        }
+
+        function div() {
+            let su1=document.getElementById("su1").value;
+            let su2=document.getElementById("su2").value;
+            let res=(parseInt(su1))/(parseInt(su2));
+            alert("나눗셈 결과:"+res);
+        }
+    </script>
+</head>
+<body>
+    <h2>사칙 연산 계산하기</h2>
+    <div>
+        <p>
+            <label>첫번째 수</label> :
+            <input type="number" name="su1" id="su1" />
+        </p>
+        <p>
+            <label>두번째 수</label> :
+            <input type="number" name="su2" id="su2" />
+        </p>
+        <p>
+            <input type="button" value="더하기" onclick="add()"/>
+            <input type="button" value="빼  기" onclick="sub()"/>
+            <input type="button" value="곱하기" onclick="mul()"/>
+            <input type="button" value="나누기" onclick="div()"/>
+            <input type="reset" value="다시 입력"/>
+        </p>
+    </div>
+</body>
+</html>

@@ -38,6 +38,38 @@
             console.log("arr2["+cnt+"]: "+arr);
             cnt++;
         }
+        console.clear();
+
+        // forEach문을 이용한 반복 출력: 객체명.forEach();
+        // arr2.forEach(function(arr,index,array) {
+
+        arr2.forEach(function() {
+            console.log("값: "+"/");
+        });
+        console.log("========================");
+        arr2.forEach(function(arr) {
+            console.log(arr+"/");
+        });
+
+        console.log("#######################");
+        // 익명 함수를 Arrow 함수로 변경해보자.
+
+        arr2.forEach((arr)=> {
+            console.log(arr+"/");
+        });
+
+        console.log("%%%%%%%%%%%%%%%%%%%%%%%%");
+        // 익명 함수를 Arrow 함수로 변경해보자.
+
+        arr2.forEach((arr)=>console.log(arr+"/"));
+
+
+        console.log("///////////////////////////////////////");
+        // 익명 함수를 Arrow 함수로 변경해보자.
+
+        arr2.forEach((arr,index)=>console.log(index+":"+arr+"/"));
+        // forEach문이 배열 사용할때는 속도가 가장 빨라서 많이 사용
+        // 우리는 주로 향상된 for문 사용 예정
     </script>
 </head>
 <body>

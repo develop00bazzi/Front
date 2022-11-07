@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t9_인터넷시계.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        'use strict';
+        let statusTime;
+
+        function clock() {
+            let today=new Date();
+            let hh=today.getHours();
+            let mm=today.getMinutes();
+            let ss=today.getSeconds();
+
+            let hh1=('0' + hh).slice(-2);
+            let mm1=('0' + mm).slice(-2);
+            let ss1=('0' + ss).slice(-2);
+
+            let h1=hh1.slice(0,1);
+            let h2=hh1.slice(1);
+            let m1=mm1.slice(0,1);
+            let m2=mm1.slice(1);
+            let s1=ss1.slice(0,1);
+            let s2=ss1.slice(1);
+            
+            console.log(hh1+mm1+ss1);
+
+            let hhImg="<img src='img/"+h1+".gif'/>"+"<img src='img/"+h2+".gif'/>";
+            let mmImg="<img src='img/"+m1+".gif'/>"+"<img src='img/"+m2+".gif'/>";
+            let ssImg="<img src='img/"+s1+".gif'/>"+"<img src='img/"+s2+".gif'/>";
+            demo.innerHTML=hhImg+" : "+mmImg+" : "+ssImg;
+        }
+
+        function clockStart() {
+            clock();
+            statusTime=setInterval(clock,1000);
+        }
+
+        function clockStop() {
+            clearInterval(statusTime);
+        }
+
+    </script>
+</head>
+<body>
+    <p><br/></p>
+    <div class="container">
+        <h2>인터넷 시계</h2>
+        <p>
+            <input type="button" value="동작" onclick="clockStart()" class="btn btn-secondary"/>
+            <input type="button" value="정지" onclick="clockStop()" class="btn btn-danger"/>
+        </p>
+        <hr/>
+        <div id="demo"></div>
+    </div>
+    <p><br/></p>
+</body>
+</html>

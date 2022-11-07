@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t13_Class(객체) 상속 사용 예제.html</title>
+    <script src="t13.js"></script>
+    <script>
+        'use strict';
+
+        class ChildClass extends Member {}
+
+
+
+        let childClass=new ChildClass("홍길동",25,"빨강");
+        console.log("성명: "+childClass.name);
+        console.log("나이: "+childClass.age);
+        console.log("좋아하는 색깔: "+childClass.color);
+
+        // let childClas2=new Member("김말숙",-25,"껌정");
+        // console.log("성명: "+childClas2.name);
+        // console.log("나이: "+childClas2.age);
+        // console.log("좋아하는 색깔:"+childClas2.color);
+        
+    </script>
+</head>
+<body>
+    <h2>클래스 연습 (Getters / Setters)</h2>
+</body>
+</html>

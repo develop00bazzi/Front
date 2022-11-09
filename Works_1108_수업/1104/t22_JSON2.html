@@ -11,53 +11,43 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     'use strict';
-    const member = {
-      name: '홍길동',
-      age : 25,
-      color: 'white',
-      brithday: new Date(),
-      atom : () => {
-        // console.log(`성명 :  + ${name}`);
-        console.log("성명 : " + member.name);
-      }
+    let str = "";
+    
+    function stringifyCheck() {
+      // 자바 객체변수 정의
+      const obj = {
+        name: "홍길동",
+        age: 29,
+        job: "프로그래머"
+      };
+      str = JSON.stringify(obj);  // 자바 객체변수의 내용을 JSON으로 변환함.
+      console.log(str);   // JSON으로 변환된 내용을 출력하고 있다. 결과 : {"name":"홍길동","age":29,"job":"프로그래머"}
     }
 
-    let json = JSON.stringify(member);  // 오브젝트를 제이슨으로 변환...
-    console.log(json);
-    const obj = JSON.parse(json); // 스트링으로 만든 JSON을 다시 Object로 변환한다.(pasrse)
-    // console.log(obj);
-    console.log(member.atom());
+    function parseCheck() {
+      stringifyCheck();  // JSON문자열형태를 만들기위해 앞의 함수를 호출했다. 그 결과로 str에는 JSON형식의 자료가 들어있게된다.
+
+      const obj = JSON.parse(str); // JSON 문자열 형태의 데이터가 JavaScript 객체의 형태로 변환된다.
+      console.log("obj : ", obj);
+      /* 결과 : 자바스크립트 객체형식으로 들어가게 된다. 18번행의 내용과 같이 처리된다.(아래참조)
+        {name: '홍길동', age: 29, job: '프로그래머'}
+      */
+    }
   </script>
 </head>
 <body>
 <p><br/></p>
 <div class="container">
-  <h2>웹을 통한 값의 전달방식</h2>
-  <pre>
-    HTTP란? Server와 Client사이의 값들을 전송해주는 통신을 정의한 프로토콜
-    HTTP : HyperText Transfer Protocol
-    클라이언트가 서버에 요청(request)할수 있고, 서버는 클라이언트에게 응답(response)하게 한다.
-
-    클라이언트가 서버에 요청해서 응답받아올때 비동기식을 통해서 값들을 받아오는 방식을 AJax라고 한다.
-
-    - AJAX : Asynchronous JavaScript And XML
-    - XML : HTML과 같은 마크업언어이다. 서버와 데이터를 주고받을때 사용되는 대표적인 언어로서,
-            동기와 된 자료를 정송하게된다. 이때 XML은 불필요한 태그가 많이 전송되기에 가독성이 떨어진다.
-            따라서 요즘은 많이 사용하지 않고 있다.
-    - JSON : JavaScript Object Notation 으로 서버와의 전송에 필요한 데이터 포멧을 말한다.
-          JSON방식은 모바일에서의 서버와 데이터 전송에도 주로 사용되고 있으며, 
-          프로그램의 종류나 플랫폼에 상관없이 사용할 수 있다.(예: C,C+,C++,Java,Python,PHP,코틀린,GO언어..)
-          자바스크립트에서는 객체와 같이 '키(key):값(value)'으로 구성되어 처리된다.
-          처리방식은 Object를 String으로 직렬화(deserialize)해서 다시 Object로 변환해서 사용하게 한다.
-      예1) 논리값을 JSON을 이용해서 스트링으로 변환?
-        let json = JSON.stringify(true);
-        console.log(json);    // 결과 'ture'
-      예2) 배열을 JSON을 이용해서 스트링으로 변환?
-        let json = JSON.stringify(['apple','banana']);
-        console.log(json);    // 결과: ["apple","banana"]
-      예3) Object을 JSON을 이용해서 스트링으로 변환?
-        
-  </pre>
+  <h2>JSON.stringify() / JSON.parse()</h2>
+  <p>JSON.stringify()<br/>
+    stringify 메서드는 JavaScript 객체를 인자로 받고 JSON 문자열을 반환.
+    <input type="button" value="stringify연습" onclick="stringifyCheck()" class="btn btn-success"/>
+  </p>
+  <hr/>
+  <p>JSON.parse()<br/>
+    parse 메서드는 JSON 문자열을 인자로 받고 결과값으로 JavaScript 객체를 반환.
+    <input type="button" value="parse연습" onclick="parseCheck()" class="btn btn-primary"/>
+  </p>
   <hr/>
 </div>
 <p><br/></p>

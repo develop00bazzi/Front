@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        'use strict';
+        
+        $(function (){
+            $('#acc >.content').hide();
+
+            $('#acc >.menu').hover(function (){
+                $(this).next().stop().show(300);
+                $(this).prev().hide(300);
+            });
+            
+            $('div.menu3').hover(function (){
+                $('div.content4').stop().hide(200);
+            });
+
+            $('div.menu2').hover(function (){
+                $('div.content3').stop().hide(200);
+            });
+
+            $('div.menu1').hover(function (){
+                $('div.content2').stop().hide(200);
+            });
+
+            $('#acc').mouseleave(function (){
+                $('#acc>.content').hide(300);
+            });
+        });
+    </script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            width: 300px;
+            background-color: #f2c6f2;
+        }
+        div.accordion {
+            width: 300px;
+        }
+        div.menu,div.content {
+            /* border: 1px solid gray; */
+            text-align: center;
+            cursor: pointer;
+        }
+        div.menu {
+            padding: 5px;
+            background-color: coral;
+            color: black;
+        }
+        div.content {
+            padding: 0px;
+            border: 0 1px;
+        }
+        .content a {
+            display: block;
+            margin: 0px;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+        }
+        .content a:hover {
+            display: block;
+            background-color: #4682B4;
+            color: black;
+        }
+        #h3 {
+            margin: 20px 0 0 0;
+        }
+        #demo {
+            text-align: center;
+        }
+
+        .content a {
+            font-weight: bold;
+        }
+        .menu {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div id="h3">
+        <h3 id="title" style="text-align: center;"><b>배지훈의 페이지</b></h3>
+    </div>
+    <div class="card-body accordion" id="acc">
+        <div class="menu menu1">배지훈의 깃허브</div>
+        <div class="content content1">
+            <a href="https://github.com/develop00bazzi/Front"  target="_blank">Front</a>
+            <a href="https://github.com/develop00bazzi/Java"  target="_blank">Java</a>
+        </div>
+        <div class="menu menu2">수강생 카페 바로가기</div>
+        <div class="content content2">
+            <a href="https://cafe.daum.net/javaspring/DWnt" target="_blank">배지훈의 게시판</a>
+            <a href="https://cafe.daum.net/javaspring/B0af" target="_blank">학습 게시판</a>
+            <a href="https://cafe.daum.net/javaspring/_memo" target="_blank">줌 링크 바로가기</a>
+            <a href="https://cafe.daum.net/javaspring/B4C0" target="_blank">일반 정보 게시판</a>
+        </div>
+        <div class="menu menu3">W3Schools</div>
+        <div class="content content3">
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank">Learn HTML</a>
+            <a href="https://www.w3schools.com/css/default.asp" target="_blank">Learn CSS</a>
+            <a href="https://www.w3schools.com/js/default.asp" target="_blank">Learn JAVASCRIPT</a>
+            <a href="https://www.w3schools.com/sql/default.asp" target="_blank">Learn SQL</a>
+            <a href="https://www.w3schools.com/java/default.asp" target="_blank">Learn JAVA</a>
+            <a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp" target="_blank">Learn BOOTSTRAP</a>
+            <a href="https://www.w3schools.com/jquery/default.asp" target="_blank">Learn JQUERY</a>
+        </div>
+        <div class="menu menu4">이외 유용한 사이트</div>
+        <div class="content content4">
+            <a href="https://www.lipsum.com/" target="_blank">LOREM IPSUM</a>
+            <a href="http://guny.kr/stuff/klorem/" target="_blank">한글 LOREM IPSUM</a>
+            <a href="https://colorbada.com/" target="_blank">컬러바다</a>
+            <a href="https://fonts.google.com/?subset=korean" target="_blank">Google Fonts</a>
+            <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+            <a href="https://colorscripter.com/" target="_blank">Color Scripter</a>
+            
+        </div>
+
+        <hr/>
+        <div id="demo">
+            환영합니다~ <br/>
+            배지훈님의 대시보드에 <br/>
+            오신 것을 환영합니다~ <br/>
+            <br/>
+            현재 대시보드에서는 <br/>
+            <br/>
+            시계 <br/>
+            웹사이트 바로가기 <br/>
+            LIFE PROGRESS BAR <br/>
+            주간 날씨 <br/>
+            월별 일정 <br/>
+            사진 <br/>
+            움짤 <br/>
+            음악 <br/>
+            <br/>
+            기능을 지원하고 있습니다.
+
+        </div>
+    </div>
+</body>
+</html>

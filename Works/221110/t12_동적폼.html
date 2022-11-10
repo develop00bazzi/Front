@@ -84,6 +84,45 @@
                   </tr>
                 </table>
               </form>
+
+
+              <!-- 동적폼 내용 추가
+
+      // 추가된 상품박스란에 입력된 항목을 검사하는 루틴....
+      for(var i=0; i<myform.elements.length; i++) {
+        if(myform.elements[i].name == "addText1") {
+          if(myform.elements[i].value == "") {
+            alert("텍스트 박스안에 상품명을 입력하세요.");
+            myform.elements[i].focus();
+            return false;
+          }
+        }
+        else if(myform.elements[i].name == "addText2") {
+          if(myform.elements[i].value == "") {
+            alert("텍스트 박스안에 상품명을 입력하세요.");
+            myform.elements[i].focus();
+            return false;
+          }
+        }
+      }
+
+      // 입력박스안의 내용이 모두 입력되었으면 처리하는 부분
+      var result = "";
+      for(var i=0; i<myform.elements.length; i++) {
+        if(myform.elements[i].name == "addText1") {
+          result += myform.elements[i].value + "*";
+        }
+        else if(myform.elements[i].name == "addText2") {
+          result += myform.elements[i].value + "=";
+          myform.elements[i+1].value = parseInt(myform.elements[i].value) * parseInt(myform.elements[i-1].value);
+          result += myform.elements[i+1].value + "\n";
+        }
+      }
+      result = result.substring(0,result.length-1);
+      alert("입력창에 입력된 상품명은? \n" + result);
+    }
+
+-->
         </div>
     <p><br/></p>
 </body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그림 필터 연습</title>
+    <style>
+        img {
+            width: 30%;
+            height: auto;   
+            float: left;
+            max-width: 500px;
+        }
+        #png2 {
+            filter: blur(5px) /* 희미하게 처리 */
+        }
+        #png3 {
+            filter: brightness(200%) /* 그림 밝게 처리 */
+        }
+        #png4 {
+            filter: contrast(250%)  /* 대비 */
+        }
+        #png5 {
+            filter: grayscale(100%) /* 흑백 처리 */
+        }
+        #png6 {
+            filter: hue-rotate(100deg)  /* 색상 */
+        }
+        #png7 {
+            filter: invert(100%)    /* 색 반전 */
+        }
+        #png8 {
+            filter: opacity(50%)    /* 불투명도 */
+        }
+        #png9 {
+            filter: saturate(5)     /* 채도 */
+        }
+        #png10 {
+            filter: sepia() 
+        }
+        #png11 {
+            filter: drop-shadow(5px 5px 3px gray) /* 그림에 그림자 */
+        }
+    </style>
+</head>
+<body>
+    <h2>그림 필터 적용하기</h2>
+    <img src="../../Images/1.png" id="png1" />
+    <img src="../../Images/1.png" id="png2" />
+    <img src="../../Images/1.png" id="png3" />
+    <img src="../../Images/1.png" id="png4" />
+    <img src="../../Images/1.png" id="png5" />
+    <img src="../../Images/1.png" id="png6" />
+    <img src="../../Images/1.png" id="png7" />
+    <img src="../../Images/1.png" id="png8" />
+    <img src="../../Images/1.png" id="png9" />
+    <img src="../../Images/1.png" id="png10" />
+    <img src="../../Images/1.png" id="png11" />
+</body>
+</html>
